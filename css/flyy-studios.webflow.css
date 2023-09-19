@@ -204,15 +204,15 @@ a {
 }
 
 .paragraph.is-about {
-	max-width: 21em;
+	max-width: 27em;
 }
 
 .paragraph.is-portfolio {
-	max-width: 36em;
+	max-width: 40em;
 }
 
 .paragraph.is-contact {
-	max-width: 21em;
+	max-width: 36em;
 	margin-top: 1.3em;
 }
 
