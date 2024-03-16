@@ -27,6 +27,21 @@ a {
 	cursor: pointer;
 }
 
+[data-gsap-fadeIn] {
+	opacity: 0;
+}
+
+[data-gsap-section] {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.6s ease;
+}
+
+[data-gsap-section].active {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
 .hero {
 	display: block;
 	-webkit-box-orient: vertical;
@@ -101,6 +116,8 @@ a {
 	-ms-flex-align: center;
 	align-items: center;
 	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.9vw;
 }
 
 .nav-x {
@@ -149,6 +166,10 @@ a {
 	height: 35em;
 }
 
+.hero-logo {
+	padding: 60px;
+}
+
 .animation-container {
 	width: 53em;
 	height: 36em;
@@ -181,7 +202,7 @@ a {
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	font-family: 'Berrie', sans-serif;
+	font-family: 'Futura', sans-serif;
 	color: #32363a;
 	font-size: 5em;
 	line-height: 0.8;
@@ -208,12 +229,13 @@ a {
 }
 
 .paragraph.is-portfolio {
-	max-width: 40em;
+	max-width: 41em;
 }
 
 .paragraph.is-contact {
 	max-width: 36em;
-	margin-top: 1.3em;
+	margin-top: 3.3em;
+	margin-bottom: 1em;
 }
 
 .paragraph.is-right {
@@ -284,15 +306,23 @@ a {
 
 .about-container {
 	width: 100%;
+	min-height: 100vh;
 	max-width: 100em;
-	padding-top: 14.06em;
+	padding: 10em;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-items: center;
 }
 
 .portfolio-container {
 	width: 100%;
+	min-height: 100vh;
 	max-width: 100em;
 	padding-top: 7.3em;
 	padding-bottom: 8.85em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .portfolio-items-container {
@@ -333,9 +363,9 @@ a {
 	align-items: center;
 }
 
-@media (min-width: 450px) {
+@media (max-width: 450px) {
 	.portfolio-columns.is-left {
-		margin-top: 3em;
+		margin-top: 22em;
 	}
 }
 
@@ -346,11 +376,12 @@ a {
 .portfolio-title {
 	margin-right: auto;
 	margin-left: auto;
-	font-family: 'Berrie', sans-serif;
+	font-family: 'Futura', sans-serif;
 	color: #32363a;
 	font-size: 2.4em;
 	font-weight: 400;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .portfolio-arrow {
@@ -404,8 +435,8 @@ a {
 .contact-container {
 	width: 100%;
 	max-width: 100em;
-	padding-top: 8.02em;
-	padding-bottom: 3.96em;
+	padding-top: 20.02em;
+	padding-bottom: 10.96em;
 }
 
 .contact-items {
@@ -439,7 +470,7 @@ a {
 	width: 100%;
 	height: 2px;
 	max-width: 100em;
-	background-color: #b9c3ce;
+	background-color: #191a1a;
 }
 
 .footer-line.is-80w {
@@ -482,7 +513,7 @@ a {
 .contact-footer-nav {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-family: 'Berrie', sans-serif;
+	font-family: 'Futura', sans-serif;
 	color: #32363a;
 	font-size: 2.08em;
 }
@@ -495,7 +526,7 @@ a {
 .contact-footer-insta {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-family: 'Berrie', sans-serif;
+	font-family: 'Futura', sans-serif;
 	color: #32363a;
 	font-size: 2.08em;
 }
@@ -594,7 +625,7 @@ a {
 	z-index: 0;
 	margin-bottom: 0px;
 	margin-left: 1.5em;
-	font-family: 'Berrie', sans-serif;
+	font-family: 'Futura', sans-serif;
 	color: #32363a;
 	font-size: 1.8em;
 	font-weight: 400;
@@ -636,7 +667,6 @@ a {
 	width: 8.3em;
 	height: 3em;
 	background-color: #fff;
-	mix-blend-mode: color-dodge;
 }
 
 .bouncing-stanga {
@@ -906,11 +936,11 @@ a {
 	}
 
 	.heading {
-		font-size: 5em;
+		font-size: 4em;
 	}
 
 	.paragraph {
-		font-size: 2.2em;
+		font-size: 3.5em;
 	}
 
 	.paragraph.is-portfolio {
@@ -925,8 +955,9 @@ a {
 		font-size: 2.7em;
 	}
 
-	.portfolio-container {
-		padding-top: 10em;
+	.portfolio-container,
+	.contact-container {
+		padding: 10em;
 	}
 
 	.portfolio-heading {
@@ -996,6 +1027,11 @@ a {
 	}
 }
 
+@media screen and (max-width: 1240px) and (min-width: 480px) {
+	.about-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 @media screen and (max-width: 767px) {
 	.gallery-overview {
 		padding: 60px 15px;
@@ -1004,8 +1040,14 @@ a {
 	.gallery-scroll {
 		padding: 60px 15px;
 	}
+
+	.about-container {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+	}
 }
 
+/* Mobile styles */
 @media screen and (max-width: 479px) {
 	.desktop {
 		display: none;
@@ -1120,10 +1162,6 @@ a {
 		display: block;
 	}
 
-	.about-container {
-		padding-top: 30px;
-	}
-
 	.portfolio-container {
 		padding-top: 58.1em;
 	}
@@ -1143,7 +1181,7 @@ a {
 	}
 
 	.portfolio-title {
-		font-size: 25px;
+		font-size: 32px;
 	}
 
 	.portfolio-arrow {
@@ -1255,6 +1293,13 @@ a {
 	font-family: 'Din Condensed';
 	src: url('../fonts/DINCondensed-Light.woff2') format('woff2');
 	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura.woff2') format('woff2');
+	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
 }
