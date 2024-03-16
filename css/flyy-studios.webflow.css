@@ -1049,6 +1049,10 @@ a {
 
 /* Mobile styles */
 @media screen and (max-width: 479px) {
+	.contact-footer {
+		display: none !important;
+	}
+
 	.desktop {
 		display: none;
 	}
