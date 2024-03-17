@@ -1,0 +1,11 @@
+# Redirect with a 301
+[[redirects]]
+  from = "https://flyy-studios.com/*"
+  to = "https://flyystudios.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://www.flyy-studios.com/*"
+  to = "https://www.flyystudios.com/:splat"
+  status = 301
+  force = true
