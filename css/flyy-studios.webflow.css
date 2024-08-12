@@ -202,10 +202,11 @@ a {
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	font-family: 'Futura', sans-serif;
+	font-family: 'Din Condensed', sans-serif;
+	font-weight: 600;
 	text-transform: uppercase;
 	color: #32363a;
-	font-size: 2em;
+	font-size: 3em;
 	line-height: 0.4;
 	text-align: center;
 	cursor: default;
@@ -949,7 +950,7 @@ a {
 	}
 
 	.subheading {
-		font-size: 2.5em;
+		font-size: 3.5em;
 	}
 
 	.heading {
@@ -1124,7 +1125,7 @@ a {
 	}
 
 	.subheading {
-		font-size: 3.5em;
+		font-size: 5.5em;
 	}
 
 	.heading {
@@ -1317,8 +1318,15 @@ a {
 
 @font-face {
 	font-family: 'Din Condensed';
-	src: url('../fonts/DINCondensed-Light.woff2') format('woff2');
+	src: url('../fonts/dincondensed-light.woff2') format('woff2');
 	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Din Condensed';
+	src: url('../fonts/dincondensed-bold.woff2') format('woff2');
+	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
