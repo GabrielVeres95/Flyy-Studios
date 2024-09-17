@@ -120,7 +120,6 @@ a {
 	-ms-flex-align: center;
 	align-items: center;
 	text-align: left;
-	text-transform: uppercase;
 	font-size: 0.9vw;
 }
 
@@ -412,7 +411,6 @@ a {
 	font-size: 2.4em;
 	font-weight: 700;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 .portfolio-arrow {
